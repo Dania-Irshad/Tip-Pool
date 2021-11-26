@@ -1,7 +1,7 @@
 describe("Helpers test (with setup and tear-down)", function() {
     beforeEach(function(){
-        billAmtInput.value = '300';
-        tipAmtInput.value = '50';
+        billAmtInput.value = 300;
+        tipAmtInput.value = 50;
         calculateTipPercent(300, 50);
         submitPaymentInfo();
     });

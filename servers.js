@@ -38,7 +38,16 @@ function updateServerTable() {
 
     appendTd(newTr, curServer.serverName);
     appendTd(newTr, '$' + tipAverage.toFixed(2));
+    appendDeleteBtn(newTr);
 
     serverTbody.append(newTr);
   }
 }
+
+serverTbody.addEventListener('click', function(e){
+  if (e.target.tagName = 'BUTTON')
+  {
+    e.target.parentElement.parentElement.remove();
+  }
+});
+

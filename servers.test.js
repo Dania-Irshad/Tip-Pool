@@ -11,11 +11,15 @@ describe("Servers test (with setup and tear-down)", function() {
     expect(allServers['server' + serverId].serverName).toEqual('Alice');
   });
 
-  it('should etc... on updateServerTable()', function () {
+  it('should update #serverTable on updateServerTable()', function () {
+    submitServerInfo();
     updateServerTable();
 
-    expect().toEqual();
-    expect().toEqual();
+    let tdList = document.querySelectorAll('#serverTable tbody tr td');
+    expect(tdList.length).toEqual(3);
+    expect(tdList[0].innerText).toEqual('Alice');
+    expect(tdList[1].innerText).toEqual('$0.00');
+    
   });
 
   afterEach(function() {

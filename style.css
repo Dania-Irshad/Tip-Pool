@@ -53,4 +53,11 @@ table {
 
 .deleteBtn {
   cursor: pointer;
+  width: 25px;
+  height: 20px;
+  border: none;
+}
+
+.delTd {
+  border: none;
 }
